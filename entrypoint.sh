@@ -28,6 +28,7 @@ helm plugin install "https://github.com/jkroepke/helm-secrets" --version v3.8.3
 echo "$kubeConfigData" | base64 -d > /tmp/kubeConfigData
 export KUBECONFIG=/tmp/kubeConfigData
 
-echo "*************************************>"
+# Printing the command executed inside this action, just for troubleshooting
+echo "*************************************"
 sh -c "$command"
-echo "*************************************<"
+echo "*************************************"
