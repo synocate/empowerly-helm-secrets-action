@@ -11,7 +11,7 @@ LABEL com.github.actions.description="Kubectl + Helm + Helm Secrets"
 LABEL com.github.actions.icon="terminal"
 LABEL com.github.actions.color="blue"
 
-RUN apk add curl
+RUN apk add git curl
 # RUN apk add py-pip curl wget ca-certificates git bash jq gcc alpine-sdk
 # RUN pip install 'awscli==1.19.112'
 
