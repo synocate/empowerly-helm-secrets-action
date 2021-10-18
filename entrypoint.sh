@@ -26,6 +26,7 @@ helm plugin install "https://github.com/jkroepke/helm-secrets" --version v3.8.3
 
 # Extract the base64 encoded config data and write this to the KUBECONFIG
 echo "$kubeConfigData" | base64 -d > /tmp/kubeConfigData
+chmod g-r /tmp/kubeConfigData
 export KUBECONFIG=/tmp/kubeConfigData
 
 # Printing the command executed inside this action, just for troubleshooting
